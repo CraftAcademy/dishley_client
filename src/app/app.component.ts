@@ -14,13 +14,13 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform,
-              public statusBar: StatusBar,
-              public splashScreen: SplashScreen,
-              public _tokenService: Angular2TokenService
-              ) {
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public _tokenService: Angular2TokenService
+  ) {
     this.initializeApp();
 
     this._tokenService.init({

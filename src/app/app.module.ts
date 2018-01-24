@@ -11,7 +11,6 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
-// import { HttpClient} from '@angular/common/http/src/client';
 
 @NgModule({
   declarations: [
@@ -32,9 +31,9 @@ import { RestaurantsProvider } from '../providers/restaurants/restaurants';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     RestaurantsProvider,
     Angular2TokenService
   ]
 })
-export class AppModule {}
+export class AppModule { }
