@@ -25,7 +25,7 @@ export class MyApp {
 
     this._tokenService.init({
       apiBase: 'https://jak-sie-masz-slowfood.herokuapp.com/api'
-    })
+    });
 
     this.pages = [
       { title: 'Home', component: HomePage },
