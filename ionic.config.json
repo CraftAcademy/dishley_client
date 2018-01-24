@@ -1,0 +1,8 @@
+{
+  "name": "dishley_client",
+  "app_id": "218162ee",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
