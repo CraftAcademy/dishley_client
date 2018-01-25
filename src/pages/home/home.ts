@@ -23,9 +23,9 @@ showMap(){
   this.addMarker(location, this.map);
 }
 
-addMarker(postion, map){
+addMarker(position, map){
   return new google.maps.Marker({
-    postion,
+    position,
     map
   });
 }
