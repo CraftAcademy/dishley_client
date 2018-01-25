@@ -9,6 +9,7 @@ declare var google: any;
 })
 export class HomePage {
 @ViewChild('map') mapRef: ElementRef;
+map: any;
 
   constructor(public navCtrl: NavController) {}
 
