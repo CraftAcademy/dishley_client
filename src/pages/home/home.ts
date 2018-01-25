@@ -8,24 +8,24 @@ declare var google: any;
   templateUrl: 'home.html'
 })
 export class HomePage {
-@ViewChild('map') mapRef: ElementRef;
+  @ViewChild('map') mapRef: ElementRef;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) { }
 
-ionViewDidLoad() {this.showMap();}
+  ionViewDidLoad() { this.showMap(); }
 
-showMap(){
-  const location = new google.maps.LatLng(59.334591, 18.063240);
-  const options = {center: location, zoom: 15};
-  const map = new google.maps.Map(this.mapRef.nativeElement, options);
+  showMap() {
+    const location = new google.maps.LatLng(59.334591, 18.063240);
+    const options = { center: location, zoom: 15 };
+    const map = new google.maps.Map(this.mapRef.nativeElement, options);
 
-  this.addMarker(location, map);
-}
+    this.addMarker(location, map);
+  }
 
-addMarker(position, map){
-  return new google.maps.Marker({
-    position,
-    map
-  });
-}
+  addMarker(position, map) {
+    return new google.maps.Marker({
+      position,
+      map
+    });
+  }
 }
