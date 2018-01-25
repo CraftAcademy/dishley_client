@@ -9,7 +9,6 @@ declare var google: any;
 })
 export class HomePage {
 @ViewChild('map') mapRef: ElementRef;
-map: any;
 
   constructor(public navCtrl: NavController) {}
 
@@ -18,9 +17,9 @@ ionViewDidLoad() {this.showMap();}
 showMap(){
   const location = new google.maps.LatLng(59.334591, 18.063240);
   const options = {center: location, zoom: 15};
-  this.map = new google.maps.Map(this.mapRef.nativeElement, options);
+  const map = new google.maps.Map(this.mapRef.nativeElement, options);
 
-  this.addMarker(location, this.map);
+  this.addMarker(location, map);
 }
 
 addMarker(position, map){
