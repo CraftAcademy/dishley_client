@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Angular2TokenService } from 'angular2-token';
 import { HomePage } from '../pages/home/home';
+import { Angular2TokenService } from 'angular2-token';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,20 +15,17 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{ title: string, component: any }>;
-  currentUser: any;
 
-  constructor
-    (public platform: Platform,
+  constructor(public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    private _tokenService: Angular2TokenService,
-    private alertCtrl: AlertController) {
+    public _tokenService: Angular2TokenService
+  ) {
+    this.initializeApp();
 
     this._tokenService.init({
       apiBase: 'https://jak-sie-masz-slowfood.herokuapp.com/api'
     });
-
-    this.initializeApp();
 
     this.pages = [
       { title: 'Home', component: HomePage },
