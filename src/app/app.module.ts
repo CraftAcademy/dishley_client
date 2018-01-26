@@ -7,10 +7,7 @@ import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { HttpModule } from '@angular/http';
 
-import { RouterModule } from '@angular/router';
-import { Angular2TokenService } from 'angular2-token';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
@@ -25,8 +22,6 @@ import { RestaurantsProvider } from '../providers/restaurants/restaurants';
     HttpModule,
     RouterModule,
     IonicModule.forRoot(MyApp),
-    HttpModule,
-    RouterModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
