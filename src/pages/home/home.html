@@ -11,13 +11,14 @@
 </ion-header>
 <ion-content padding>
 <h3>Restaurants</h3>
-<ion-card *ngFor="let restaurant of restaurants">
+<ion-card *ngFor="let restaurantCategory of restaurantCategories">
 
-  <ion-card-header>
+  <!-- <ion-card-header>
     {{restaurant.relationships["restaurant-category"]["data"].name}}
-  </ion-card-header>
+  </ion-card-header> -->
   <ion-card-header>
-    {{restaurant.attributes.name}}
+    {{restaurantCategory.attributes.name}}
+    
   </ion-card-header>
 </ion-card>
 </ion-content>

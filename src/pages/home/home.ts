@@ -1,5 +1,5 @@
 import { RestaurantsProvider } from './../../providers/restaurants/restaurants';
-import { RestaurantsProvider } from './../../providers/restaurants/restaurant_categories';
+import { RestaurantCategoriesProvider } from './../../providers/restaurants/restaurant_categories';
 
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -12,16 +12,16 @@ declare var google: any;
 })
 export class HomePage {
   public restaurants: any
-  public restaurant_categories: any
+  public restaurantCategories: any
 
   constructor(
     public navCtrl: NavController,
     public restaurantsProvider: RestaurantsProvider,
-    public restaurantCategoriesProvider: RestaurantCategoriesProvider,
+    public restaurantCategoriesProvider: RestaurantCategoriesProvider
   ) {
     this.restaurantCategoriesProvider.all().subscribe(({ data }) => {
-      this.restaurant_categories = data;
-      console.log(this.restaurant_categories);
+      this.restaurantCategories = data;
+      console.log(this.restaurantCategories);
     })
   }
 

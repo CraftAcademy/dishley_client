@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
+import { RestaurantCategoriesProvider } from '../providers/restaurants/restaurant_categories';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RestaurantsProvider } from '../providers/restaurants/restaurants';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     RestaurantsProvider,
+    RestaurantCategoriesProvider,
     Angular2TokenService
   ]
 })
